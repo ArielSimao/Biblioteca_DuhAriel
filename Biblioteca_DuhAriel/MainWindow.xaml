@@ -1,0 +1,34 @@
+﻿<Window x:Class="Biblioteca_DuhAriel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Biblioteca_DuhAriel"
+        
+    TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" Width="1125" Height="625">
+    <Grid Margin="0,-2,0,2">
+        <Label Content="ID" HorizontalAlignment="Left" Margin="58,108,0,0" VerticalAlignment="Top" Width="45" HorizontalContentAlignment="Right"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="58,149,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right"/>
+        <Label Content="Escritor" HorizontalAlignment="Left" Margin="58,193,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.183,5.054" HorizontalContentAlignment="Right"/>
+        <Label Content="Genero" HorizontalAlignment="Left" Margin="58,246,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.183,5.054" HorizontalContentAlignment="Right"/>
+        <TextBox Name="txtId" HorizontalAlignment="Left" Height="23" Margin="117,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" BorderThickness="1"/>
+        <TextBox Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="117,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="1"/>
+        <TextBox Name="txtEscritor" HorizontalAlignment="Left" Height="23" Margin="117,196,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="1"/>
+        <ComboBox Name="cbGenero" HorizontalAlignment="Left" Margin="117,246,0,0" VerticalAlignment="Top" Width="217" BorderThickness="1" Height="23"/>
+        <Button Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="58,366,0,0" VerticalAlignment="Top" Width="134" Height="39"/>
+        <Button Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="200,366,0,0" VerticalAlignment="Top" Width="134" Height="39"/>
+        <Button Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="58,412,0,0" VerticalAlignment="Top" Width="134" Height="39"/>
+        <Button Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="200,412,0,0" VerticalAlignment="Top" Width="134" Height="39" RenderTransformOrigin="0.616,-0.504"/>
+        <Button Name="btnSair" Content="Sair" HorizontalAlignment="Left" Margin="58,478,0,0" VerticalAlignment="Top" Width="276" Height="39"/>
+        <DataGrid Name="dgLivros" HorizontalAlignment="Left" Height="421" Margin="408,96,0,0" VerticalAlignment="Top" Width="658" BorderThickness="1" BorderBrush="Black"/>
+        <Label Content="Biblioteca Duh Ariel" HorizontalAlignment="Left" Margin="254,33,0,0" VerticalAlignment="Top" Width="632" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Black"/>
+
+
+    </Grid>
+</Window>
