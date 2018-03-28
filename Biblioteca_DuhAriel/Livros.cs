@@ -19,5 +19,9 @@ namespace Biblioteca_DuhAriel
         public string Escritor { get; set; }
 
         public int idGenero { get; set; }
+
+        [Required]
+        [StringLength(50)]
+        public string Genero { get; set; }
     }
 }

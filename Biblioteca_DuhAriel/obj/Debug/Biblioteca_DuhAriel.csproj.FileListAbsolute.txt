@@ -19,3 +19,7 @@ C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\o
 C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\obj\Debug\Biblioteca_DuhAriel.csproj.CoreCompileInputs.cache
 C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\obj\Debug\Biblioteca_DuhAriel.exe
 C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\obj\Debug\Biblioteca_DuhAriel.pdb
+C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\bin\Debug\EntityFramework.dll
+C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\bin\Debug\EntityFramework.xml
+C:\Users\Windows\Documents\CSharp_2018\Biblioteca_DuhAriel\Biblioteca_DuhAriel\bin\Debug\EntityFramework.SqlServer.xml
