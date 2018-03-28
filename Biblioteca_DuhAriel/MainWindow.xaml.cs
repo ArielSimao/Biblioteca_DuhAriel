@@ -54,7 +54,7 @@ namespace Biblioteca_DuhAriel
         public void CarregaGenero()
         {
             var sql = from l in Conexao.Genero select l.NomeGenero;
-            cbGenero.ItemsSource = sql.FirstOrDefault();
+            cbGenero.ItemsSource = sql.ToList();
     
         }
 
@@ -80,7 +80,7 @@ namespace Biblioteca_DuhAriel
 
             MessageBox.Show("Salvo Com Sucesso !");
 
-            Liv.Id = int.Parse(txtId.Text);
+            txtId.Text = Liv.Id.ToString();
 
             LimparCampos();
 
@@ -89,34 +89,48 @@ namespace Biblioteca_DuhAriel
 
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
         {
-            if (txtId.Text != "")
+            try
             {
-                Liv = Conexao.Livros.Find(txtId.Text);
-                txtNome.Text = Liv.Nome;
-                txtEscritor.Text = Liv.Escritor;
-                cbGenero.Text = Liv.Genero;
+                if (txtId.Text != "")
+                {
+                    Liv = Conexao.Livros.Find(int.Parse(txtId.Text));
+                    txtNome.Text = Liv.Nome;
+                    txtEscritor.Text = Liv.Escritor;
+                    cbGenero.Text = Liv.Genero;
+                }
+                else
+                {
+                    MessageBox.Show("ID Invalido !");
+                    LimparCampos();
+                }
             }
-            else
+            catch(Exception a)
             {
-                MessageBox.Show("ID Invalido !");
+                MessageBox.Show(a.Message);
                 LimparCampos();
             }
-
            
         }
 
         private void btnExcluir_Click(object sender, RoutedEventArgs e)
         {
-            Liv = Conexao.Livros.Remove(Liv);
-            Liv.Nome = null;
-            Liv.Escritor = null;
-            Liv.Genero = null;
+            try
+            {
+                Liv = Conexao.Livros.Remove(Liv);
+                Liv.Nome = null;
+                Liv.Escritor = null;
+                Liv.Genero = null;
 
-            Conexao.SaveChanges();
-            MessageBox.Show("Excluido Com Sucesso !");
-            LimparCampos();
-            AtualizarGrid();
-
+                Conexao.SaveChanges();
+                MessageBox.Show("Excluido Com Sucesso !");
+                LimparCampos();
+                AtualizarGrid();
+            }
+            catch (Exception a)
+            {
+                MessageBox.Show(a.Message);
+                LimparCampos();
+            }
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
