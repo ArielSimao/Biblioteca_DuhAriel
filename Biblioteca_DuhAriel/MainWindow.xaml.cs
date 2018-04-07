@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Data.Entity.Migrations;
 
 namespace Biblioteca_DuhAriel
 {
@@ -72,19 +73,39 @@ namespace Biblioteca_DuhAriel
         
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
-            Liv.Nome = txtNome.Text;
-            Liv.Escritor = txtEscritor.Text;
-            Liv.Genero = cbGenero.Text;
-            Conexao.Livros.Add(Liv);
-            Conexao.SaveChanges();
+            try
+            {
+                if (txtId.Text == "")
+                {
+                    Liv.Nome = txtNome.Text;
+                    Liv.Escritor = txtEscritor.Text;
+                    Liv.Genero = cbGenero.Text;
+                    Conexao.Livros.Add(Liv);
 
-            MessageBox.Show("Salvo Com Sucesso !");
+                }
+                else
+                {
+                    Liv.Nome = txtNome.Text;
+                    Liv.Escritor = txtEscritor.Text;
+                    Liv.Genero = cbGenero.Text;
+                    Conexao.Livros.AddOrUpdate(Liv);
+                }
 
-            txtId.Text = Liv.Id.ToString();
+                Conexao.SaveChanges();
 
-            LimparCampos();
 
-            AtualizarGrid();
+                MessageBox.Show("Salvo Com Sucesso !", "Parabens", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                txtId.Text = Liv.Id.ToString();
+
+                LimparCampos();
+
+                AtualizarGrid();
+            }
+            catch(Exception a)
+            {
+                MessageBox.Show("Campos nao podem ser nulos !", "Atencao", MessageBoxButton.OK, MessageBoxImage.Hand);
+            }
         }
 
         private void btnPesquisar_Click(object sender, RoutedEventArgs e)
@@ -100,7 +121,7 @@ namespace Biblioteca_DuhAriel
                 }
                 else
                 {
-                    MessageBox.Show("ID Invalido !");
+                    MessageBox.Show("ID Invalido !","Atençáo",MessageBoxButton.OK,MessageBoxImage.Warning);
                     LimparCampos();
                 }
             }

@@ -26,8 +26,15 @@
         <Button Name="btnPesquisar" Content="Pesquisar" HorizontalAlignment="Left" Margin="58,412,0,0" VerticalAlignment="Top" Width="134" Height="39" Click="btnPesquisar_Click"/>
         <Button Name="btnExcluir" Content="Excluir" HorizontalAlignment="Left" Margin="200,412,0,0" VerticalAlignment="Top" Width="134" Height="39" RenderTransformOrigin="0.616,-0.504" Click="btnExcluir_Click"/>
         <Button Name="btnSair" Content="Sair" HorizontalAlignment="Left" Margin="58,478,0,0" VerticalAlignment="Top" Width="276" Height="39" Click="btnSair_Click"/>
-        <DataGrid Name="dgLivros" HorizontalAlignment="Left" Height="421" Margin="408,96,0,0" VerticalAlignment="Top" Width="658" BorderThickness="1" BorderBrush="Black"/>
-        <Label Content="Biblioteca Duh Ariel" HorizontalAlignment="Left" Margin="254,33,0,0" VerticalAlignment="Top" Width="632" HorizontalContentAlignment="Center" FontSize="18" FontWeight="Black"/>
+        <DataGrid Name="dgLivros" HorizontalAlignment="Left" Height="409" Margin="408,108,0,0" VerticalAlignment="Top" Width="654" BorderThickness="1" BorderBrush="Black" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Path=Id}"  Header="ID"/>
+                <DataGridTextColumn Binding="{Binding Path=Nome}"  Header="NOME"/>
+                <DataGridTextColumn Binding="{Binding Path=Escritor}"  Header="AUTOR"/>
+                <DataGridTextColumn Binding="{Binding Path=Genero}"  Header="GENERO"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Label Content="Biblioteca Duh Ariel" HorizontalAlignment="Left" Margin="254,33,0,0" VerticalAlignment="Top" Width="632" HorizontalContentAlignment="Center" FontSize="22" FontWeight="Black"/>
 
 
     </Grid>
