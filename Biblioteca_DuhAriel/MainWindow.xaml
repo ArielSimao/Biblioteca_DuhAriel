@@ -18,8 +18,8 @@
         <Label Content="Escritor" HorizontalAlignment="Left" Margin="58,220,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.183,5.054" HorizontalContentAlignment="Right"/>
         <Label Content="Genero" HorizontalAlignment="Left" Margin="58,273,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.183,5.054" HorizontalContentAlignment="Right"/>
         <TextBox Name="txtId" HorizontalAlignment="Left" Height="35" Margin="117,108,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" BorderThickness="1"/>
-        <TextBox Name="txtNome" HorizontalAlignment="Left" Height="35" Margin="117,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="1"/>
-        <TextBox Name="txtEscritor" HorizontalAlignment="Left" Height="35" Margin="115,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="1"/>
+        <TextBox Name="txtNome" HorizontalAlignment="Left" Height="35" Margin="117,167,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="1" MaxLength="50"/>
+        <TextBox Name="txtEscritor" HorizontalAlignment="Left" Height="35" Margin="115,220,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="217" BorderThickness="1" MaxLength="50"/>
         <ComboBox Name="cbGenero" HorizontalAlignment="Left" Margin="117,282,0,0" VerticalAlignment="Top" Width="217" BorderThickness="1" Height="35"/>
         <Button Name="btnNovo" Content="Novo" HorizontalAlignment="Left" Margin="58,366,0,0" VerticalAlignment="Top" Width="134" Height="39" Click="btnNovo_Click"/>
         <Button Name="btnSalvar" Content="Salvar" HorizontalAlignment="Left" Margin="200,366,0,0" VerticalAlignment="Top" Width="134" Height="39" Click="btnSalvar_Click"/>

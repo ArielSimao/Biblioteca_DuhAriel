@@ -21,19 +21,14 @@ namespace Biblioteca_DuhAriel
     /// </summary>
     public partial class MainWindow : Window
     {
-
         Livros Liv = new Livros();
         BD Conexao = new BD();
 
         public List<Livros> ListaLivro = new List<Livros>();
 
-        
-
-
         public MainWindow()
         {
             InitializeComponent();
-
             AtualizarGrid();
         }
 
@@ -56,7 +51,6 @@ namespace Biblioteca_DuhAriel
         {
             var sql = from l in Conexao.Genero select l.NomeGenero;
             cbGenero.ItemsSource = sql.ToList();
-    
         }
 
         private void btnSair_Click(object sender, RoutedEventArgs e)
@@ -69,7 +63,6 @@ namespace Biblioteca_DuhAriel
             txtNome.Focus();
             LimparCampos();
         }
-
         
         private void btnSalvar_Click(object sender, RoutedEventArgs e)
         {
@@ -81,7 +74,6 @@ namespace Biblioteca_DuhAriel
                     Liv.Escritor = txtEscritor.Text;
                     Liv.Genero = cbGenero.Text;
                     Conexao.Livros.Add(Liv);
-
                 }
                 else
                 {
@@ -92,8 +84,7 @@ namespace Biblioteca_DuhAriel
                 }
 
                 Conexao.SaveChanges();
-
-
+                
                 MessageBox.Show("Salvo Com Sucesso !", "Parabens", MessageBoxButton.OK, MessageBoxImage.Information);
 
                 txtId.Text = Liv.Id.ToString();
@@ -104,7 +95,7 @@ namespace Biblioteca_DuhAriel
             }
             catch(Exception a)
             {
-                MessageBox.Show("Campos nao podem ser nulos !", "Atencao", MessageBoxButton.OK, MessageBoxImage.Hand);
+                MessageBox.Show("Os campos nao podem ser nulos !", "Atençáo", MessageBoxButton.OK, MessageBoxImage.Hand);
             }
         }
 
@@ -157,7 +148,6 @@ namespace Biblioteca_DuhAriel
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CarregaGenero();
-
         }
     }
 }
